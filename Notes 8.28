@@ -1,0 +1,65 @@
+Racket programming recursion practice
+
+Implement a maxNum function.  This function reads in a list of numbers and returns the largest.
+Define this function in a recursive manner.
+
+(define (max-num 1st)
+ (cond [(empty? 1st) (error "empty list")]
+       [(= 1 (length 1st))
+           (car 1st)]
+       [else
+          {let ([x (car 1st)]
+                [max-tail (max-num (cdr 1st))])
+                
+              (if (> x max-tail)
+              x max-tail)}]
+              
+              
+              
+  Implement the "fizzbuzz" game.  The function counts from 1 to the specified number, returning a
+string with the result.  The rules are:
+
+    If a number is divisible by 3 and by 5, instead say "fizzbuzz"
+    Else if a number is divisible by 3, instead say "fizz"
+    Else if a number is divisible by 5, instead say "buzz"
+    Otherwise say the number
+
+Here is a sample run of this function:
+
+*Main> fizzbuzz 15
+"1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz"
+
+Test your solution at http://codecheck.it/files/1808270644exxn4wmxe7wi57mqlclneit03 (Links to an external site.).
+
+(define (fb-help i)
+     (cond [(and ( =0 (module i 3))
+                 ( =0 (module i 5)))
+                 "fizzbuzz"]
+                 
+           [(= 0 (module i 3))  "fizz"]
+           [(= 0 (module i 5))  "buzz"]
+           [else  (number > string i)]))
+           
+           
+ -------------------------
+ (define (fizzbuzz n)
+ 
+ (if (<= n 0)
+ (error " n mubst be positive")
+ (fizzbuzz 1 n)))
+ 
+ (define (fizzbuzz i n)
+ (string-apprend
+       (fizz-help i)
+       " "
+       (if (= i n ) " " (fizzbuzz
+       ---------------------------
+(define (fizzbuzz n)
+
+     (if (= n 1)
+     " 1 "
+     (string-append 
+           (fizzbuzz(- n 1))
+           " "
+           (fb-help n))))
+--------------------------------------------------------------
