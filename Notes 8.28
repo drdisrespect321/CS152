@@ -38,7 +38,7 @@ Test your solution at http://codecheck.it/files/1808270644exxn4wmxe7wi57mqlclnei
                  
            [(= 0 (module i 3))  "fizz"]
            [(= 0 (module i 5))  "buzz"]
-           [else  (number > string i)]))
+           [else  (number -> string i)]))
            
            
  -------------------------
